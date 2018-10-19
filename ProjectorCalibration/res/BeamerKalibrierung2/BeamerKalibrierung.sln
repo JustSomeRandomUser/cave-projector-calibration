@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BeamerKalibrierung", "BeamerKalibrierung\BeamerKalibrierung.vcxproj", "{1802F676-AA38-489F-ADE6-408E67DCCC4F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{530B26AC-B06A-4AFE-8C2A-C619679A1416} = {530B26AC-B06A-4AFE-8C2A-C619679A1416}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CaveApi", "..\CaveApi\CaveApi\CaveApi.vcxproj", "{530B26AC-B06A-4AFE-8C2A-C619679A1416}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1802F676-AA38-489F-ADE6-408E67DCCC4F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1802F676-AA38-489F-ADE6-408E67DCCC4F}.Debug|Win32.Build.0 = Debug|Win32
+		{1802F676-AA38-489F-ADE6-408E67DCCC4F}.Release|Win32.ActiveCfg = Release|Win32
+		{1802F676-AA38-489F-ADE6-408E67DCCC4F}.Release|Win32.Build.0 = Release|Win32
+		{530B26AC-B06A-4AFE-8C2A-C619679A1416}.Debug|Win32.ActiveCfg = Debug|Win32
+		{530B26AC-B06A-4AFE-8C2A-C619679A1416}.Debug|Win32.Build.0 = Debug|Win32
+		{530B26AC-B06A-4AFE-8C2A-C619679A1416}.Release|Win32.ActiveCfg = Release|Win32
+		{530B26AC-B06A-4AFE-8C2A-C619679A1416}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

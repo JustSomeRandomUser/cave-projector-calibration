@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?org-vrjuggler-jccl-settings configuration.version="3.0"?>
+<configuration xmlns="http://www.vrjuggler.org/jccl/xsd/3.0/configuration" name="Configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vrjuggler.org/jccl/xsd/3.0/configuration http://www.vrjuggler.org/jccl/xsd/3.0/configuration.xsd">
+<!-- WiiMote-Konfiguration für zu Hause. Brauchen wir, da Kinect und Wii nicht auf
+     dem selben Port laufen können. :1337 ist daher auch der einzige Unterschied.
+     Bitte immer mit wii_vrpn_cave.jconf synchron halten.  -->
+   <elements>
+      <vrpn name="VRPN_Wiimote1" version="2">
+         <tracker_server />
+         <button_server>Wiimote1@localhost:1337</button_server>
+         <analog_server>Wiimote1@localhost:1337</analog_server>
+         <tracker_count>0</tracker_count>
+         <button_count>17</button_count>
+         <analog_count>12</analog_count>
+         <min>-180.0</min>
+         <max>180.0</max>
+         <position_filters>
+            <position_transform_filter name="CHANGEME" version="1">
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <custom_scale>1.0</custom_scale>
+               <device_units>1.0</device_units>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+            </position_transform_filter>
+         </position_filters>
+         <device_host />
+      </vrpn>
+   </elements>
+</configuration>

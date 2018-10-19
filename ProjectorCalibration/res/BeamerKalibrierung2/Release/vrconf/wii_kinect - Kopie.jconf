@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?org-vrjuggler-jccl-settings configuration.version="3.0"?>
+<configuration xmlns="http://www.vrjuggler.org/jccl/xsd/3.0/configuration" name="Configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vrjuggler.org/jccl/xsd/3.0/configuration http://www.vrjuggler.org/jccl/xsd/3.0/configuration.xsd">
+
+
+
+  <!-- Konfigurationsdatei, um die WiiMote UND Kinect zu Hause zu nutzen -->
+
+
+
+   <include>include/wii_vrpn_cave.jconf</include>
+   <include>include/kinect_vrpn_cave.jconf</include>
+   <include>include/wii_elements.jconf</include>
+   <include>include/kinect_elements.jconf</include>
+   <elements>
+      <alias name="VJHead" version="1">
+         <proxy>Head Proxy</proxy>
+      </alias>
+      <user name="User1" version="1">
+         <head_position>VJHead</head_position>
+         <interocular_distance>0.069</interocular_distance>
+      </user>
+      <!--
+      <corba_remote_reconfig name="CORBA Remote Run-Time Reconfiguration" version="1">
+         <naming_service_host>localhost</naming_service_host>
+         <naming_service_port>2809</naming_service_port>
+         <iiop_version>1.0</iiop_version>
+      </corba_remote_reconfig>
+      -->
+      <alias name="VJWand" version="1">
+         <proxy>Wand Proxy</proxy>
+      </alias>
+      <alias name="VJPointer" version="1">
+         <proxy>Wand Proxy</proxy>
+      </alias>
+	  
+      <!--<cluster_manager name="Cluster Manager" version="2">
+         <plugin>StartBarrierPlugin</plugin>
+         <plugin>RIMPlugin</plugin>
+         <plugin>SwapLockTCPPlugin</plugin>
+         <plugin>ApplicationDataManager</plugin>
+         <cluster_node>Node2</cluster_node>
+      </cluster_manager>
+      <cluster_node name="Node2" version="1">-->
+ 
+        <display_system name="Node 2 Display System" version="3">
+            <number_of_pipes>4</number_of_pipes>
+            <pipes>0.0</pipes>
+			<pipes>1.0</pipes>
+			<pipes>2.0</pipes>
+			<pipes>1.0</pipes>
+            <use_swap_group>false</use_swap_group>
+            </display_system>
+            <display_window name="Leftscreen" version="5">
+               <origin>0</origin>
+               <origin>0</origin>
+               <size>1024</size>
+               <size>768</size>
+               <pipe>1</pipe>
+               <frame_buffer_config>
+                  <opengl_frame_buffer_config name="frame_buffer_config 0" version="3">
+                     <visual_id>-1</visual_id>
+                     <red_size>1</red_size>
+                     <green_size>1</green_size>
+                     <blue_size>1</blue_size>
+                     <alpha_size>1</alpha_size>
+                     <auxiliary_buffer_count>0</auxiliary_buffer_count>
+                     <depth_buffer_size>1</depth_buffer_size>
+                     <stencil_buffer_size>1</stencil_buffer_size>
+                     <accum_red_size>1</accum_red_size>
+                     <accum_green_size>1</accum_green_size>
+                     <accum_blue_size>1</accum_blue_size>
+                     <accum_alpha_size>1</accum_alpha_size>
+                     <num_sample_buffers>0</num_sample_buffers>
+                     <num_samples>0</num_samples>
+                  </opengl_frame_buffer_config>
+               </frame_buffer_config>
+               <stereo>false</stereo>
+               <border>true</border>
+               <hide_mouse>false</hide_mouse>
+               <full_screen>false</full_screen>
+               <always_on_top>true</always_on_top>
+               <active>true</active>
+               <surface_viewports>
+                  <surface_viewport name="Left Surface Viewport" version="2">
+                     <origin>0.0</origin>
+                     <origin>0.0</origin>
+                     <size>1.0</size>
+                     <size>1.0</size>
+                     <view>Left Eye</view>
+                     <lower_left_corner>-1.5</lower_left_corner>
+                     <lower_left_corner>0.0</lower_left_corner>
+                     <lower_left_corner>1.5</lower_left_corner>
+                     <lower_right_corner>-1.5</lower_right_corner>
+                     <lower_right_corner>0.0</lower_right_corner>
+                     <lower_right_corner>-1.5</lower_right_corner>
+                     <upper_right_corner>-1.5</upper_right_corner>
+                     <upper_right_corner>2.3</upper_right_corner>
+                     <upper_right_corner>-1.5</upper_right_corner>
+                     <upper_left_corner>-1.5</upper_left_corner>
+                     <upper_left_corner>2.3</upper_left_corner>
+                     <upper_left_corner>1.5</upper_left_corner>
+                     <user>User1</user>
+                     <active>true</active>
+                     <tracked>false</tracked>
+                     <tracker_proxy />
+                  </surface_viewport>
+               </surface_viewports>
+               <keyboard_mouse_device_name />
+               <lock_key>KEY_NONE</lock_key>
+               <start_locked>false</start_locked>
+               <sleep_time>75</sleep_time>
+            </display_window>
+			<display_window name="Frontscreen" version="5">
+               <origin>20</origin>
+               <origin>0</origin>
+               <size>1024</size>
+               <size>768</size>
+               <pipe>1</pipe>
+               <frame_buffer_config>
+                  <opengl_frame_buffer_config name="frame_buffer_config 0" version="3">
+                     <visual_id>-1</visual_id>
+                     <red_size>1</red_size>
+                     <green_size>1</green_size>
+                     <blue_size>1</blue_size>
+                     <alpha_size>1</alpha_size>
+                     <auxiliary_buffer_count>0</auxiliary_buffer_count>
+                     <depth_buffer_size>1</depth_buffer_size>
+                     <stencil_buffer_size>1</stencil_buffer_size>
+                     <accum_red_size>1</accum_red_size>
+                     <accum_green_size>1</accum_green_size>
+                     <accum_blue_size>1</accum_blue_size>
+                     <accum_alpha_size>1</accum_alpha_size>
+                     <num_sample_buffers>0</num_sample_buffers>
+                     <num_samples>0</num_samples>
+                  </opengl_frame_buffer_config>
+               </frame_buffer_config>
+               <stereo>false</stereo>
+               <border>true</border>
+               <hide_mouse>false</hide_mouse>
+               <full_screen>false</full_screen>
+               <always_on_top>true</always_on_top>
+               <active>true</active>
+               <surface_viewports>
+                  <surface_viewport name="Left Surface Viewport" version="2">
+                     <origin>0.0</origin>
+                     <origin>0.0</origin>
+                     <size>1.0</size>
+                     <size>1.0</size>
+                     <view>Left Eye</view>
+                     <lower_left_corner>-1.5</lower_left_corner>
+                     <lower_left_corner>0.0</lower_left_corner>
+                     <lower_left_corner>-1.5</lower_left_corner>
+                     <lower_right_corner>1.5</lower_right_corner>
+                     <lower_right_corner>0.0</lower_right_corner>
+                     <lower_right_corner>-1.5</lower_right_corner>
+                     <upper_right_corner>1.5</upper_right_corner>
+                     <upper_right_corner>2.3</upper_right_corner>
+                     <upper_right_corner>-1.5</upper_right_corner>
+                     <upper_left_corner>-1.5</upper_left_corner>
+                     <upper_left_corner>2.3</upper_left_corner>
+                     <upper_left_corner>-1.5</upper_left_corner>
+                     <user>User1</user>
+                     <active>true</active>
+                     <tracked>false</tracked>
+                     <tracker_proxy />
+                  </surface_viewport>
+               </surface_viewports>
+               <keyboard_mouse_device_name />
+               <lock_key>KEY_NONE</lock_key>
+               <start_locked>false</start_locked>
+               <sleep_time>75</sleep_time>
+            </display_window>
+			<display_window name="Rightscreen" version="5">
+               <origin>0</origin>
+               <origin>0</origin>
+               <size>1024</size>
+               <size>768</size>
+               <pipe>1</pipe>
+               <frame_buffer_config>
+                  <opengl_frame_buffer_config name="frame_buffer_config 0" version="3">
+                     <visual_id>-1</visual_id>
+                     <red_size>1</red_size>
+                     <green_size>1</green_size>
+                     <blue_size>1</blue_size>
+                     <alpha_size>1</alpha_size>
+                     <auxiliary_buffer_count>0</auxiliary_buffer_count>
+                     <depth_buffer_size>1</depth_buffer_size>
+                     <stencil_buffer_size>1</stencil_buffer_size>
+                     <accum_red_size>1</accum_red_size>
+                     <accum_green_size>1</accum_green_size>
+                     <accum_blue_size>1</accum_blue_size>
+                     <accum_alpha_size>1</accum_alpha_size>
+                     <num_sample_buffers>0</num_sample_buffers>
+                     <num_samples>0</num_samples>
+                  </opengl_frame_buffer_config>
+               </frame_buffer_config>
+               <stereo>false</stereo>
+               <border>true</border>
+               <hide_mouse>false</hide_mouse>
+               <full_screen>false</full_screen>
+               <always_on_top>true</always_on_top>
+               <active>true</active>
+               <surface_viewports>
+                  <surface_viewport name="Left Surface Viewport" version="2">
+                     <origin>0.0</origin>
+                     <origin>0.0</origin>
+                     <size>1.0</size>
+                     <size>1.0</size>
+                     <view>Left Eye</view>
+                     <lower_left_corner>1.5</lower_left_corner>
+                     <lower_left_corner>0.0</lower_left_corner>
+                     <lower_left_corner>-1.5</lower_left_corner>
+                     <lower_right_corner>1.5</lower_right_corner>
+                     <lower_right_corner>0.0</lower_right_corner>
+                     <lower_right_corner>1.5</lower_right_corner>
+                     <upper_right_corner>1.5</upper_right_corner>
+                     <upper_right_corner>2.3</upper_right_corner>
+                     <upper_right_corner>1.5</upper_right_corner>
+                     <upper_left_corner>1.5</upper_left_corner>
+                     <upper_left_corner>2.3</upper_left_corner>
+                     <upper_left_corner>-1.5</upper_left_corner>
+                     <user>User1</user>
+                     <active>true</active>
+                     <tracked>false</tracked>
+                     <tracker_proxy />
+                  </surface_viewport>
+               </surface_viewports>
+               <keyboard_mouse_device_name />
+               <lock_key>KEY_NONE</lock_key>
+               <start_locked>false</start_locked>
+               <sleep_time>75</sleep_time>
+            </display_window>
+			
+			<display_window name="Floorscreen" version="5">
+               <origin>0</origin>
+               <origin>0</origin>
+               <size>1024</size>
+               <size>768</size>
+               <pipe>1</pipe>
+               <frame_buffer_config>
+                  <opengl_frame_buffer_config name="frame_buffer_config 0" version="3">
+                     <visual_id>-1</visual_id>
+                     <red_size>1</red_size>
+                     <green_size>1</green_size>
+                     <blue_size>1</blue_size>
+                     <alpha_size>1</alpha_size>
+                     <auxiliary_buffer_count>0</auxiliary_buffer_count>
+                     <depth_buffer_size>1</depth_buffer_size>
+                     <stencil_buffer_size>1</stencil_buffer_size>
+                     <accum_red_size>1</accum_red_size>
+                     <accum_green_size>1</accum_green_size>
+                     <accum_blue_size>1</accum_blue_size>
+                     <accum_alpha_size>1</accum_alpha_size>
+                     <num_sample_buffers>0</num_sample_buffers>
+                     <num_samples>0</num_samples>
+                  </opengl_frame_buffer_config>
+               </frame_buffer_config>
+               <stereo>false</stereo>
+               <border>true</border>
+               <hide_mouse>false</hide_mouse>
+               <full_screen>false</full_screen>
+               <always_on_top>true</always_on_top>
+               <active>true</active>
+               <surface_viewports>
+                  <surface_viewport name="Left Surface Viewport" version="2">
+                     <origin>0.0</origin>
+                     <origin>0.0</origin>
+                     <size>1.0</size>
+                     <size>1.0</size>
+                     <view>Left Eye</view>
+                     <lower_left_corner>1.5</lower_left_corner>
+                     <lower_left_corner>0.0</lower_left_corner>
+                     <lower_left_corner>1.5</lower_left_corner>
+                     <lower_right_corner>-1.5</lower_right_corner>
+                     <lower_right_corner>0.0</lower_right_corner>
+                     <lower_right_corner>1.5</lower_right_corner>
+                     <upper_right_corner>-1.5</upper_right_corner>
+                     <upper_right_corner>2.3</upper_right_corner>
+                     <upper_right_corner>1.5</upper_right_corner>
+                     <upper_left_corner>1.5</upper_left_corner>
+                     <upper_left_corner>2.3</upper_left_corner>
+                     <upper_left_corner>1.5</upper_left_corner>
+                     <user>User1</user>
+                     <active>true</active>
+                     <tracked>false</tracked>
+                     <tracker_proxy />
+                  </surface_viewport>
+               </surface_viewports>
+               <keyboard_mouse_device_name />
+               <lock_key>KEY_NONE</lock_key>
+               <start_locked>false</start_locked>
+               <sleep_time>75</sleep_time>
+            </display_window>
+			
+			<!--</display_windows>
+			<listen_port>7000</listen_port>
+         <host_name>Telan-Aurora</host_name>
+		</cluster_node>-->
+         <!--   <display_window name="Left Surface2" version="5">
+               <origin>20</origin>
+               <origin>0</origin>
+               <size>1024</size>
+               <size>768</size>
+               <pipe>0</pipe>
+               <frame_buffer_config>
+                  <opengl_frame_buffer_config name="frame_buffer_config 0" version="3">
+                     <visual_id>-1</visual_id>
+                     <red_size>1</red_size>
+                     <green_size>1</green_size>
+                     <blue_size>1</blue_size>
+                     <alpha_size>1</alpha_size>
+                     <auxiliary_buffer_count>0</auxiliary_buffer_count>
+                     <depth_buffer_size>1</depth_buffer_size>
+                     <stencil_buffer_size>1</stencil_buffer_size>
+                     <accum_red_size>1</accum_red_size>
+                     <accum_green_size>1</accum_green_size>
+                     <accum_blue_size>1</accum_blue_size>
+                     <accum_alpha_size>1</accum_alpha_size>
+                     <num_sample_buffers>0</num_sample_buffers>
+                     <num_samples>0</num_samples>
+                  </opengl_frame_buffer_config>
+               </frame_buffer_config>
+               <stereo>false</stereo>
+               <border>true</border>
+               <hide_mouse>false</hide_mouse>
+               <full_screen>false</full_screen>
+               <always_on_top>true</always_on_top>
+               <active>true</active>
+               <surface_viewports>
+                  <surface_viewport name="Left Surface Viewport2" version="2">
+                     <origin>0.0</origin>
+                     <origin>0.0</origin>
+                     <size>1.0</size>
+                     <size>1.0</size>
+                     <view>Left Eye</view>
+                     <lower_left_corner>-1.5</lower_left_corner>
+                     <lower_left_corner>0.0</lower_left_corner>
+                     <lower_left_corner>1.5</lower_left_corner>
+                     <lower_right_corner>-1.5</lower_right_corner>
+                     <lower_right_corner>0.0</lower_right_corner>
+                     <lower_right_corner>-1.5</lower_right_corner>
+                     <upper_right_corner>-1.5</upper_right_corner>
+                     <upper_right_corner>2.3</upper_right_corner>
+                     <upper_right_corner>-1.5</upper_right_corner>
+                     <upper_left_corner>-1.5</upper_left_corner>
+                     <upper_left_corner>2.3</upper_left_corner>
+                     <upper_left_corner>1.5</upper_left_corner>
+                     <user>User1</user>
+                     <active>true</active>
+                     <tracked>false</tracked>
+                     <tracker_proxy />
+                  </surface_viewport>
+               </surface_viewports>
+               <keyboard_mouse_device_name />
+               <lock_key>KEY_NONE</lock_key>
+               <start_locked>false</start_locked>
+               <sleep_time>75</sleep_time>
+            </display_window>-->
+     <!--     </display_windows>
+	
+         <listen_port>7000</listen_port>
+         <host_name>Telan-Aurora</host_name>
+      </cluster_node>
+      <<start_barrier_plugin name="Start Barrier Plug-in" version="1">
+         <start_master>Node2</start_master>
+      </start_barrier_plugin>
+      <swap_lock_tcp_plugin name="TCP Swap Lock Pug-in" version="1">
+         <sync_server>Node2</sync_server>
+         <listen_port>0</listen_port>
+      </swap_lock_tcp_plugin>-->
+	  
+      <input_manager name="InputManager0" version="2">
+         <driver>VRPN_drv</driver>
+      </input_manager>
+   </elements>
+</configuration>
+

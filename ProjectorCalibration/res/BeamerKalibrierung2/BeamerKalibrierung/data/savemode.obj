@@ -1,0 +1,14 @@
+# Blender3D v249 OBJ File: cave.blend
+# www.blender3d.org
+mtllib savemode.mtl
+v -1.490000 0.300000 -1.100000
+v -1.490000 0.300000 -0.500000
+v -1.490000 0.400000 -0.500000
+v -1.490000 0.400000 -1.100001
+vt 0.999999 0.000000
+vt 1.000000 0.999997
+vt 0.000000 1.000000
+vt 0.000000 0.000000
+usemtl Material_speichern-ein.bmp
+s off
+f 1/1 4/2 3/3 2/4

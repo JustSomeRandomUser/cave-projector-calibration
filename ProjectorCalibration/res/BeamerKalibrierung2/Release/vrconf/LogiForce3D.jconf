@@ -1,0 +1,106 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?org-vrjuggler-jccl-settings configuration.version="3.0"?>
+<configuration xmlns="http://www.vrjuggler.org/jccl/xsd/3.0/configuration" name="C:\Programme\VR Juggler 2.2.1\sharerjuggler\data\configFiles\c3htw-final.jconf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vrjuggler.org/jccl/xsd/3.0/configuration http://www.vrjuggler.org/jccl/xsd/3.0/configuration.xsd">
+   <elements>
+      <vrpn name="VRPN_LogiForce3D" version="2">
+         <tracker_server />
+         <button_server>LogiForce3D@cave01:13378</button_server>
+         <analog_server>LogiForce3D@cave01:13378</analog_server>
+         <tracker_count>0</tracker_count>
+         <button_count>9</button_count>
+         <analog_count>7</analog_count>
+         <min>-1024.0</min>
+         <max>1024.0</max>
+         <position_filters>
+            <position_transform_filter name="CHANGEME" version="1">
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <custom_scale>1.0</custom_scale>
+               <device_units>1.0</device_units>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+            </position_transform_filter>
+         </position_filters>
+         <device_host>Node2</device_host>
+      </vrpn>
+      <input_manager name="InputManager" version="2">
+         <driver>VRPN_drv</driver>
+      </input_manager>
+      
+      <digital_proxy name="LogiForce3DDigitalProxy000" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>0</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy001" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>1</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy002" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>2</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy003" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>3</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy004" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>4</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy005" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>5</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy006" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>6</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy007" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>7</unit>
+      </digital_proxy>
+      <digital_proxy name="LogiForce3DDigitalProxy008" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>8</unit>
+      </digital_proxy>
+      
+      <analog_proxy name="LogiForce3DAnalogProxy000" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>0</unit>
+      </analog_proxy>
+      <analog_proxy name="LogiForce3DAnalogProxy001" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>1</unit>
+      </analog_proxy>
+      <analog_proxy name="LogiForce3DAnalogProxy002" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>2</unit>
+      </analog_proxy>
+      <analog_proxy name="LogiForce3DAnalogProxy003" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>3</unit>
+      </analog_proxy>
+      <analog_proxy name="LogiForce3DAnalogProxy004" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>4</unit>
+      </analog_proxy>
+      <analog_proxy name="LogiForce3DAnalogProxy005" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>5</unit>
+      </analog_proxy>
+      <analog_proxy name="LogiForce3DAnalogProxy006" version="1">
+         <device>VRPN_LogiForce3D</device>
+         <unit>6</unit>
+      </analog_proxy>
+   </elements>
+</configuration>
+

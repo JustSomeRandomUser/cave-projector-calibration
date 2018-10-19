@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?org-vrjuggler-jccl-settings configuration.version="3.0"?>
+<configuration xmlns="http://www.vrjuggler.org/jccl/xsd/3.0/configuration" name="Configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vrjuggler.org/jccl/xsd/3.0/configuration http://www.vrjuggler.org/jccl/xsd/3.0/configuration.xsd">
+   <!-- Hier sind alle standortunabhängigen Spezifikationen der WiiMote enthalten: Buttons und Analogs: deren Proxies und Aliase -->
+   <elements>
+
+      <!-- WII ANALOG PROXIES -->
+
+      <analog_proxy name="AnalogProxy01" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>0</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy02" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>1</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy03" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>2</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy04" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>3</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy05" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>4</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy06" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>5</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy07" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>6</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy08" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>7</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy09" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>8</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy10" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>9</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy11" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>10</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogProxy12" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>11</unit>
+      </analog_proxy>
+
+      <!-- WII BUTTON PROXIES -->
+
+      <digital_proxy name="DigitalProxy01" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>0</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy02" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>1</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy03" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>2</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy04" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>3</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy05" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>4</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy06" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>5</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy07" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>6</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy08" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>7</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy09" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>8</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy10" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>9</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy11" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>10</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy12" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>11</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy13" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>12</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy14" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>13</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy15" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>14</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy16" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>15</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalProxy17" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>16</unit>
+      </digital_proxy>
+
+      <digital_proxy name="VJSystemStopKernelProxy" version="1">
+         <device>VRPN_Wiimote1</device>
+         <unit>10</unit>
+      </digital_proxy>
+      <alias name="VJSystemStopKernel" version="1">
+         <proxy>VJSystemStopKernelProxy</proxy>
+      </alias>
+
+      <!-- WII ANALOG ALIAS -->
+
+      <alias name="WiimoteAnalog01" version="1">
+         <proxy>AnalogProxy01</proxy>
+      </alias>
+      <alias name="WiimoteAnalog02" version="1">
+         <proxy>AnalogProxy02</proxy>
+      </alias>
+      <alias name="WiimoteAnalog03" version="1">
+         <proxy>AnalogProxy03</proxy>
+      </alias>
+      <alias name="WiimoteAnalog04" version="1">
+         <proxy>AnalogProxy04</proxy>
+      </alias>
+      <alias name="WiimoteAnalog05" version="1">
+         <proxy>AnalogProxy05</proxy>
+      </alias>
+      <alias name="WiimoteAnalog06" version="1">
+         <proxy>AnalogProxy06</proxy>
+      </alias>
+      <alias name="WiimoteAnalog07" version="1">
+         <proxy>AnalogProxy07</proxy>
+      </alias>
+      <alias name="WiimoteAnalog08" version="1">
+         <proxy>AnalogProxy08</proxy>
+      </alias>
+      <alias name="WiimoteAnalog09" version="1">
+         <proxy>AnalogProxy09</proxy>
+      </alias>
+      <alias name="WiimoteAnalog10" version="1">
+         <proxy>AnalogProxy10</proxy>
+      </alias>
+      <alias name="WiimoteAnalog11" version="1">
+         <proxy>AnalogProxy11</proxy>
+      </alias>
+      <alias name="WiimoteAnalog12" version="1">
+         <proxy>AnalogProxy12</proxy>
+      </alias>
+
+      <!-- WII BUTTON ALIAS -->
+
+      <alias name="WiimoteButton01" version="1">
+         <proxy>DigitalProxy01</proxy>
+      </alias>
+      <alias name="WiimoteButton02" version="1">
+         <proxy>DigitalProxy02</proxy>
+      </alias>
+      <alias name="WiimoteButton03" version="1">
+         <proxy>DigitalProxy03</proxy>
+      </alias>
+      <alias name="WiimoteButton04" version="1">
+         <proxy>DigitalProxy04</proxy>
+      </alias>
+      <alias name="WiimoteButton05" version="1">
+         <proxy>DigitalProxy05</proxy>
+      </alias>
+      <alias name="WiimoteButton06" version="1">
+         <proxy>DigitalProxy06</proxy>
+      </alias>
+      <alias name="WiimoteButton07" version="1">
+         <proxy>DigitalProxy07</proxy>
+      </alias>
+      <alias name="WiimoteButton08" version="1">
+         <proxy>DigitalProxy08</proxy>
+      </alias>
+      <alias name="WiimoteButton09" version="1">
+         <proxy>DigitalProxy09</proxy>
+      </alias>
+      <alias name="WiimoteButton10" version="1">
+         <proxy>DigitalProxy10</proxy>
+      </alias>
+      <alias name="WiimoteButton11" version="1">
+         <proxy>DigitalProxy11</proxy>
+      </alias>
+      <alias name="WiimoteButton12" version="1">
+         <proxy>DigitalProxy12</proxy>
+      </alias>
+      <alias name="WiimoteButton13" version="1">
+         <proxy>DigitalProxy13</proxy>
+      </alias>
+      <alias name="WiimoteButton14" version="1">
+         <proxy>DigitalProxy14</proxy>
+      </alias>
+      <alias name="WiimoteButton15" version="1">
+         <proxy>DigitalProxy15</proxy>
+      </alias>
+      <alias name="WiimoteButton16" version="1">
+         <proxy>DigitalProxy16</proxy>
+      </alias>
+      <alias name="WiimoteButton17" version="1">
+         <proxy>DigitalProxy17</proxy>
+      </alias>
+
+      <alias name="VJButton0" version="1">
+         <proxy>DigitalProxy05</proxy>
+      </alias>
+      <alias name="VJButton1" version="1">
+         <proxy>DigitalProxy06</proxy>
+      </alias>
+   </elements>
+</configuration>

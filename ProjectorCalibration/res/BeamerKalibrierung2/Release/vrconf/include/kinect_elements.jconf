@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?org-vrjuggler-jccl-settings configuration.version="3.0"?>
+<configuration xmlns="http://www.vrjuggler.org/jccl/xsd/3.0/configuration" name="Configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.vrjuggler.org/jccl/xsd/3.0/configuration http://www.vrjuggler.org/jccl/xsd/3.0/configuration.xsd">
+<!-- Hier sind alle standortunabhängigen Spezifikationen der Kinect enthalten: Tracker (Gelenke) und Gestendaten
+     ACHTUNG: Ganz unten stehen Debug-Kanäle. Diese haben immer den Offset der Anzahl der regulären Kanäle.
+     Wird also ein neuer regulärer Kanal hinzugefügt (Button, Analog, Tracker), dann müssen die zur Zeit
+     20 Debug-Einträge der entsprechenden Klasse auch verschoben werden.
+  -->
+   <elements>
+      <!-- KINECT JOINT PROXIES -->
+      <position_proxy name="Head Proxy" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>0</unit>
+         <position_filters>
+            <position_transform_filter name="Position Filters" version="1">
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <custom_scale>1.0</custom_scale>
+               <device_units>1.0</device_units>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+            </position_transform_filter>
+         </position_filters>
+      </position_proxy>
+      <position_proxy name="J01" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>1</unit>
+      </position_proxy>
+      <position_proxy name="J02" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>2</unit>
+      </position_proxy>
+      <position_proxy name="J03" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>3</unit>
+      </position_proxy>
+      <position_proxy name="J04" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>4</unit>
+      </position_proxy>
+      <position_proxy name="J05" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>5</unit>
+      </position_proxy>
+      <position_proxy name="J06" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>6</unit>
+      </position_proxy>
+      <position_proxy name="J07" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>7</unit>
+      </position_proxy>
+      <position_proxy name="J08" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>8</unit>
+      </position_proxy>
+      <position_proxy name="J09" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>9</unit>
+      </position_proxy>
+      <position_proxy name="J10" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>10</unit>
+      </position_proxy>
+      <position_proxy name="Wand Proxy" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>11</unit>
+         <position_filters>
+            <position_transform_filter name="Position Filters" version="1">
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_translate>0.0</pre_translate>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <pre_rotation>0.0</pre_rotation>
+               <custom_scale>1.0</custom_scale>
+               <device_units>1.0</device_units>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_translate>0.0</post_translate>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+               <post_rotation>0.0</post_rotation>
+            </position_transform_filter>
+         </position_filters>
+      </position_proxy>
+      <position_proxy name="J12" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>12</unit>
+      </position_proxy>
+      <position_proxy name="J13" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>13</unit>
+      </position_proxy>
+      <position_proxy name="J14" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>14</unit>
+      </position_proxy>
+      <position_proxy name="J15" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>15</unit>
+      </position_proxy>
+      <position_proxy name="J16" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>16</unit>
+      </position_proxy>
+      <position_proxy name="J17" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>17</unit>
+      </position_proxy>
+      <position_proxy name="J18" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>18</unit>
+      </position_proxy>
+      <position_proxy name="J19" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>19</unit>
+      </position_proxy>
+
+      <!-- KINECT JOINT ALIAS -->
+
+      <alias name="Hip_Center" version="1">
+         <proxy>J01</proxy>
+      </alias>
+      <alias name="Spine" version="1">
+         <proxy>J02</proxy>
+      </alias>
+      <alias name="Shoulder_Center" version="1">
+         <proxy>J03</proxy>
+      </alias>
+      <alias name="Shoulder_Left" version="1">
+         <proxy>J04</proxy>
+      </alias>
+      <alias name="Elbow_Left" version="1">
+         <proxy>J05</proxy>
+      </alias>
+      <alias name="Wrist_Left" version="1">
+         <proxy>J06</proxy>
+      </alias>
+      <alias name="Hand_Left" version="1">
+         <proxy>J07</proxy>
+      </alias>
+      <alias name="Shoulder_Right" version="1">
+         <proxy>J08</proxy>
+      </alias>
+      <alias name="Elbow_Right" version="1">
+         <proxy>J09</proxy>
+      </alias>
+      <alias name="Wrist_Right" version="1">
+         <proxy>J10</proxy>
+      </alias>
+      <alias name="Hip_Left" version="1">
+         <proxy>J12</proxy>
+      </alias>
+      <alias name="Knee_Left" version="1">
+         <proxy>J13</proxy>
+      </alias>
+      <alias name="Ankle_Left" version="1">
+         <proxy>J14</proxy>
+      </alias>
+      <alias name="Foot_Left" version="1">
+         <proxy>J15</proxy>
+      </alias>
+      <alias name="Hip_Right" version="1">
+         <proxy>J16</proxy>
+      </alias>
+      <alias name="Knee_Right" version="1">
+         <proxy>J17</proxy>
+      </alias>
+      <alias name="Ankle_Right" version="1">
+         <proxy>J18</proxy>
+      </alias>
+      <alias name="Foot_Right" version="1">
+         <proxy>J19</proxy>
+      </alias>
+
+      <!-- KINECT GESTURES -->
+
+      <position_proxy name="G00" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>20</unit>
+      </position_proxy>
+      <position_proxy name="G01" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>21</unit>
+      </position_proxy>
+      <analog_proxy name="G02" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>0</unit>
+      </analog_proxy>
+      <analog_proxy name="G03" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>1</unit>
+      </analog_proxy>
+      <position_proxy name="G04" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>22</unit>
+      </position_proxy>
+      <position_proxy name="G05" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>23</unit>
+      </position_proxy>
+      <analog_proxy name="G06" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>2</unit>
+      </analog_proxy>
+      <analog_proxy name="G07" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>3</unit>
+      </analog_proxy>
+      <analog_proxy name="G08" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>4</unit>
+      </analog_proxy>
+     <analog_proxy name="G09" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>5</unit>
+      </analog_proxy>
+
+      <alias name="GestureLeftHandCenter" version="1">
+         <proxy>G00</proxy>
+      </alias>
+      <alias name="GestureLeftHandTip" version="1">
+         <proxy>G01</proxy>
+      </alias>
+      <alias name="GestureLeftHandState" version="1">
+         <proxy>G02</proxy>
+      </alias>
+      <alias name="GestureLeftHandTrackingState" version="1">
+         <proxy>G03</proxy>
+      </alias>
+      <alias name="GestureRightHandCenter" version="1">
+         <proxy>G04</proxy>
+      </alias>
+      <alias name="GestureRightHandTip" version="1">
+         <proxy>G05</proxy>
+      </alias>
+      <alias name="GestureRightHandState" version="1">
+         <proxy>G06</proxy>
+      </alias>
+      <alias name="GestureRightHandTrackingState" version="1">
+         <proxy>G07</proxy>
+      </alias>
+      <alias name="WipSpeed" version="1">
+         <proxy>G08</proxy>
+      </alias>
+      <alias name="UserHeight" version="1">
+         <proxy>G09</proxy>
+      </alias>
+
+      <!-- DEBUG-KANÄLE, Jeweils 20 Stück. -->
+
+      <!-- DEBUG Buttons. Offset 0 (Keine Buttons im Release-Server) -->
+      <digital_proxy name="DigitalKinectDBG0" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>0</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG1" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>1</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG2" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>2</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG3" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>3</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG4" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>4</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG5" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>5</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG6" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>6</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG7" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>7</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG8" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>8</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG9" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>9</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG10" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>10</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG11" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>11</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG12" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>12</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG13" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>13</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG14" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>14</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG15" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>15</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG16" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>16</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG17" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>17</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG18" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>18</unit>
+      </digital_proxy>
+      <digital_proxy name="DigitalKinectDBG19" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>19</unit>
+      </digital_proxy>
+
+      <!-- DEBUG Analog. Offset 6 (6 Kanäle im Release-Server) -->
+      <analog_proxy name="AnalogKinectDBG0" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>6</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG1" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>7</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG2" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>8</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG3" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>9</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG4" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>10</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG5" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>11</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG6" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>12</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG7" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>13</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG8" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>14</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG9" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>15</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG10" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>16</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG11" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>17</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG12" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>18</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG13" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>19</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG14" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>20</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG15" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>21</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG16" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>22</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG17" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>23</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG18" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>24</unit>
+      </analog_proxy>
+      <analog_proxy name="AnalogKinectDBG19" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>25</unit>
+      </analog_proxy>
+
+      <!-- DEBUG Tracker. Offset 24 (24 Tracker im Release-Server) -->
+      <position_proxy name="PositionKinectDBG0" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>24</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG1" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>25</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG2" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>26</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG3" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>27</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG4" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>28</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG5" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>29</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG6" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>30</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG7" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>31</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG8" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>32</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG9" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>33</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG10" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>34</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG11" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>35</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG12" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>36</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG13" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>37</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG14" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>38</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG15" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>39</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG16" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>40</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG17" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>41</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG18" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>42</unit>
+      </position_proxy>
+      <position_proxy name="PositionKinectDBG19" version="1">
+         <device>VRPN_Kinect</device>
+         <unit>43</unit>
+      </position_proxy>
+   </elements>
+</configuration>
